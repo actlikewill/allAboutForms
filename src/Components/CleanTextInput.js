@@ -54,6 +54,11 @@ const InputContainer = styled.div`
         &:invalid + label {
             color: red;
         }
+
+        &::placeholder {
+            font-size: 80%;
+            color: #000;
+        }
         
     }
 
@@ -104,7 +109,7 @@ const InputContainer = styled.div`
 
 const CleanTextInput = (props) => {
    
-const { type, name } = props;
+const { type, name, placeholder } = props;
 const [inputType, setInputType] = useState(type);
 
 const showHidePassword = (e) => {
@@ -118,7 +123,7 @@ const showHidePassword = (e) => {
 
 return (
         <InputContainer {...props}>            
-            <input id={name} name={name} type={inputType}/>
+            <input {...props} placeholder={placeholder} id={name} name={name} type={inputType}/>
             <label>
             <span>{props.label}</span>
             {

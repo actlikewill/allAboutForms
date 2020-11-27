@@ -1,12 +1,14 @@
 import React from 'react';
-import RegForm from './Pages/RegistrationForm';
+import Pages from './Pages';
+import Nav from './Components/Nav';
 import { BrowserRouter, Route} from 'react-router-dom';
 
 function App() {
   return (
-    <BrowserRouter>    
-      <Route path="/register"><RegForm /></Route>
-    
+    <BrowserRouter>
+      <Nav />   
+      <Route path="/register"><Pages.RegistrationForm /></Route>    
+      <Route path="/checkout"><Pages.CheckoutForm /></Route>    
     </BrowserRouter>
   );
 }

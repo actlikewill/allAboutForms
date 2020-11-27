@@ -1,6 +1,6 @@
 import React from 'react';
 import CleanTextInput from '../../Components/CleanTextInput';
-import SubmitButton from '../../Components/SubmitButton';
+import SubmitButton from '../../Components/Button';
 import styled from 'styled-components';
 
 const FormBase = styled.form`
@@ -33,7 +33,7 @@ const RegistrationForm =  () =>  (
             label="Choose Password" 
             hint="Password should be minimum 8 characters."
             />
-        <SubmitButton  />
+        <SubmitButton value="Submit" type="submit" />
     </FormBase>
 );
 

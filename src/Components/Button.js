@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const BaseButton = styled.input.attrs(props => ({type: "submit"}))`
+const BaseButton = styled.input`
     display: block;
     width: 100%;
     background-color: gray;
@@ -26,13 +26,10 @@ const BaseButton = styled.input.attrs(props => ({type: "submit"}))`
     }
 `;
 
-const SubmitButton = () => {
-    const clickHandle = (e) => {
-        e.preventDefault();
-    }
+const Button = (props) => { 
     return (
-        <BaseButton onClick={(e) => clickHandle(e)} value="Submit"/>
+        <BaseButton {...props}/>
     );
 }
 
-export default SubmitButton;
+export default Button;
